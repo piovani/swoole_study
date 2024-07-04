@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: app
+    image: phpswoole/swoole:php8.3
+    volumes:
+      - .:/var/www
+    ports:
+      - 8080:8080
+    command: "php src/service.php"
