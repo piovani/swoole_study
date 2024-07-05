@@ -1,9 +1,26 @@
 services:
-  app:
-    container_name: app
+  container-swoole:
+    container_name: container-swoole
     image: phpswoole/swoole:php8.3
     volumes:
-      - .:/var/www
+      - ./swoole-example:/var/www
     ports:
       - 8080:8080
-    command: "php src/service.php"
+    command: "php service.php"
+
+  container-fpm:
+    container_name: container-fpm
+    image: phpswoole/swoole:php8.3
+    volumes:
+      - ./fpm-example:/var/www
+    ports:
+      - 8081:8080
+    command: "tail -f /dev/null"
+
+#  container-k6:
+#    image: grafana/k6
+#    volumes:
+#      - .:/var/www
+#    ports:
+#      - 8082:8080
+#    command: "php swoole-example/service.php"

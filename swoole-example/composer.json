@@ -2,7 +2,7 @@
     "name": "piovani/swoole_study",
     "autoload": {
         "psr-4": {
-            "Piovani\\SwooleStudy\\": "src/"
+            "Piovani\\SwooleStudy\\": "swoole-example/"
         }
     },
     "authors": [

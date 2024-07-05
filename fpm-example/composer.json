@@ -1,0 +1,14 @@
+{
+    "name": "piovani/fpm-example",
+    "autoload": {
+        "psr-4": {
+            "Piovani\\FpmExample\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Allison Piovani"
+        }
+    ],
+    "require": {}
+}
