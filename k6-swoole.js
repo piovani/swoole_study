@@ -2,7 +2,7 @@ import { check } from "k6";
 import http from "k6/http";
 
 export const options = {
-    iterations: 200000, // 200k
+    iterations: 2000,
 };
 
 export default function () {

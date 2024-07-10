@@ -1,5 +1,11 @@
-test-swoole:
-	k6 run k6-swoole.js
+up:
+	docker-compose up -d
 
-test-fpm:
-	k6 run k6-fpm.js
+down:
+	docker-compose down
+
+test:
+	k6 run --vus 50 k6-swoole.js
+
+status:
+	docker stats

@@ -6,13 +6,6 @@ services:
       - ./swoole-example:/var/www
     ports:
       - 8080:8080
+    mem_limit: 16m
+    cpus: 0.01 # 62,5 MHz
     command: "php service.php"
-
-  container-fpm:
-    container_name: container-fpm
-    image: php:8.3.8-fpm
-    volumes:
-      - ./fpm-example:/var/www
-    ports:
-      - 8081:8080
-    command: "tail -f /dev/null"
